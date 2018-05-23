@@ -1,0 +1,33 @@
+<?php
+
+
+function db() {
+
+    $host = 'localhost';
+    $db   = 'l2b';
+    $user = 'root';
+    $pass = '';
+    $charset = 'utf8mb4';
+    
+    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+    $opt = [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+    ];
+    $pdo = new PDO($dsn, $user, $pass, $opt);
+    return $pdo;
+}
+
+
+ function fetchProductDetails() {
+    $pdo = db();
+    $stmt = $pdo->query('SELECT * FROM products')->fetchAll();
+    return $stmt;
+}
+
+function insertShippingAddress() {
+    $pdo = db();
+}
+
+?>

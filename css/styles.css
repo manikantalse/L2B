@@ -1,0 +1,32 @@
+/* Styles for L2B e-commerce page */
+
+.page-head {
+    height: 100px;
+    background-color: #000;
+}
+.no-padding {
+    padding:0;
+}
+.page-head .image-container{
+    padding-top: 15.5px;
+}
+.products-container .product img{
+    height: 300px;
+}
+.product-details{
+    padding-left: 3em;
+}
+.cart-btn{
+    margin-left: 3em;
+    text-align: right;
+}
+.product {
+    padding-top: 4em;
+}
+.shipping {
+    padding-left: 2em;
+    padding-top: 2em;
+}
+.products-container{
+    margin: 0;
+}
